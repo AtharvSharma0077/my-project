@@ -1,0 +1,48 @@
+Description of the HTML Code:
+This HTML file creates a Student Registration Form. Here's what it includes:
+The document uses the <!DOCTYPE html> declaration and is set to English (lang="en").
+It links to an external CSS file for styling: student_form.css.
+The page contains a heading: "Student Registration Form".
+Two identical forms are present (likely a duplication by mistake):
+Each form includes three input fields:
+Name: Text input, allows only letters and spaces.
+Email: Email input, with built-in email format validation.
+Age: Number input, restricted to values between 1 and 99.
+Two buttons:
+Register: Submits the form.
+Reset: Clears the form fields.
+A JavaScript file (script.js) is linked at the end to handle any form logic.
+
+
+Description of the CSS Code:
+This CSS defines the styling for the <form> and <body> elements in your HTML page.
+form { ... }
+This block styles the form:
+background-color: rgb(55, 185, 146);
+Sets the form's background to a greenish-teal shade.
+color: rgb(248, 13, 13);
+Sets the text color inside the form to bright red.
+width: 200px;
+The form's width is fixed to 200 pixels.
+height: 300px;
+The form’s height is fixed to 300 pixels.
+border: 15px solid black;
+Adds a thick (15px), solid black border around the form.
+border-radius: 10px;
+Rounds the corners of the form for a smooth appearance.
+padding: 30px;
+Adds 30 pixels of space inside the form (between the border and content).
+margin: 10px 80px;
+Adds vertical margin of 10px (top and bottom) and horizontal margin of 80px (left and right), spacing it away from nearby elements.
+display: flex;
+Uses Flexbox layout for arranging internal form elements.
+flex-direction: column;
+Aligns the form elements (like labels and inputs) vertically.
+justify-content: center;
+Centers the form content vertically inside the form.
+body { ... }
+This block styles the overall page body:
+display: flex;
+Enables Flexbox layout for the whole page.
+flex-direction: column;
+Makes all direct children of the <body> (like headings and forms) stack vertically.
