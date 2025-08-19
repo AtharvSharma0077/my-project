@@ -1,25 +1,97 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML + CSS + JS</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Counter</title>
+  <style>
+    /* ===== Page Styling ===== */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #0f1117;
+      color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-    
-    <div id="root">
-      <div>
-        <img src="/images/html.svg" class="logo"/>
-        <img src="/images/css.svg" class="logo"/>
-        <img src="/images/javascript.svg" class="logo"/>
-      </div>
-    <h1>HTML + CSS + JavaScript</h1>
-    <p class="read-instructions" style="display: none;">
-      Change HTML/ CSS/ JS code and hit refresh the URL to see the changes.
-    </p>
+    /* ===== Container Box ===== */
+    .wrapper {
+      width: 90%;
+      max-width: 600px;
+      background: #1c1f2b;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 0 25px rgba(0, 255, 200, 0.3);
+    }
+
+    /* ===== Heading ===== */
+    h1 {
+      text-align: center;
+      margin-bottom: 18px;
+      font-size: 26px;
+      color: #00ffc8;
+      text-shadow: 0 0 8px rgba(0,255,200,0.7);
+    }
+
+    /* ===== Character Counter Display ===== */
+    .counter {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      text-align: right;
+      color: #00ffc8;
+    }
+
+    /* ===== Textarea Styling ===== */
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 14px;
+      background: #11131a;
+      border: 2px solid #00ffc8;
+      border-radius: 10px;
+      color: #f0f0f0;
+      font-size: 15px;
+      resize: none;
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Glow effect on focus */
+    textarea:focus {
+      border-color: #00ffaa;
+      box-shadow: 0 0 15px rgba(0, 255, 200, 0.6);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Box -->
+  <div class="wrapper">
+    <h1>Typing Tracker</h1>
+
+    <!-- Character Counter Display -->
+    <div class="counter">
+      Characters: <span id="charNum">0</span>
+    </div>
+
+    <!-- Textarea for Input -->
+    <textarea id="writer" placeholder="Write something cool..."></textarea>
   </div>
-  <script src="script.js"></script>
-  </body>
-</html> 
+
+  <script>
+    // Get textarea and counter elements
+    const writer = document.getElementById("writer");
+    const charNum = document.getElementById("charNum");
+
+    // Update character count when typing
+    writer.addEventListener("input", () => {
+      charNum.textContent = writer.value.length;
+    });
+  </script>
+
+</body>
+</html>
